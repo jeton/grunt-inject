@@ -15,7 +15,7 @@ module.exports = function (grunt) {
     }
 
     this.files.forEach(function (file) {
-      grunt.file.write(file.dest, grunt.file.read(file.src).replace('<!-- inject -->', '<script type="text/javascript">' + scriptText + '</script>'));
+      grunt.file.write(file.dest, grunt.file.read(file.src).replace('<!-- inject -->',  scriptText));
       grunt.log.ok('Dev scripts injected'.blue + ' into ' + file.dest);
     });
 
